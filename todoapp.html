@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TODO APP</title>
+	<style>
+
+		.hidden{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>TODO LIST</h1>
+	<div id='todo-view'>
+		<ul id='list-content'>
+<!-- 			<li class="list-item">
+				<input type="checkbox"><span></span>
+			</li> -->
+		</ul>
+
+		<div id='input-add-item'>
+			<input type="text" id="input-content"><span><button type="button" id="button-add-item">ADD</button></span>
+		</div>
+
+		<button type="button" id="button-view-finished">VIEW FINISHED</button>
+
+	</div>
+	<div id='finished-view' class="hidden">
+		<ul id='finished-list-content'>
+<!-- 			<li class="list-item">
+				<span></span>
+			</li> -->
+		</ul>
+		<button type='button' id='button-return'>RETURN</button>
+	</div>
+
+	<script src="todoItem.js"></script>
+	<script src="todoList.js"></script>
+	<script src="todoapp.js"></script>
+</body>
+</html>
