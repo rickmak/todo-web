@@ -3,26 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<title>TODO APP</title>
-	<style>
-
-		.hidden{
-			display: none;
-		}
-
-		.time-stamp{
-			font-size: small;
-			color:#888;
-			padding-left: 10px;
-		}
-		.btn-del{
-			padding-left: 10px;
-			display: none;
-			cursor:pointer;
-		}
-		.list-item:hover .btn-del{
-			display: inline-block;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/todoapp.css">
+		
 </head>
 <body>
 	<h1 class="app-title">TODO LIST</h1>
@@ -43,9 +25,11 @@
 		</ul>
 		<button type='button' id='button-return'>RETURN</button>
 	</div>
-	<script src="timeStamp.js"></script>
-	<script src="todoItem.js"></script>
-	<script src="todoList.js"></script>
+	<script src="model/timeStamp.js"></script>
+	<script src="model/todoItem.js"></script>
+	<script src="model/todoList.js"></script>
+	<script src="modelToView.js"></script>
+	<script src="lisnters.js"></script>
 	<script src="todoapp.js"></script>
 </body>
 </html>
