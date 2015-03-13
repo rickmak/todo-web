@@ -29,7 +29,7 @@ function todoDomItem(item, myList){
 				//remove from todo list
 				domItem.parentNode.removeChild(domItem);
 				//add to finished list
-				var newDomItem = finishedDomItem(todoItem);
+				var newDomItem = finishedDomItem(todoItem, myList);
 				document.getElementById("finished-list-content").appendChild(newDomItem);
 				
 			}, 500);
@@ -50,15 +50,31 @@ function todoDomItem(item, myList){
 		domItem.appendChild(timeStamp);
 	}
 
+	var delButton = document.createElement('button');
+	delButton.type = "button";
+	delButton.className = 'btn-del';
+	delButton.innerHTML="X";
+
+	delButton.addEventListener('click', function(todoItem, domItem){
+		return function(){
+			myList.removeTask(todoItem);
+			//remove from finished list
+			domItem.parentNode.removeChild(domItem);				
+		}
+	}(item, domItem));
+
+	domItem.appendChild(delButton);
+
 	return domItem;
 }
 
-function finishedDomItem(item){
+function finishedDomItem(item, myList){
 	if (item.pending)
 		return "";
 
 	var domItem = document.createElement('li');
 	domItem.className = 'list-item';
+
 
 	var text = document.createElement('span');
 	text.innerHTML = item.content;
@@ -72,6 +88,21 @@ function finishedDomItem(item){
 		timeStamp.innerHTML = "Created at " + item.birth;
 		domItem.appendChild(timeStamp);
 	}
+
+	var delButton = document.createElement('button');
+	delButton.type = "button";
+	delButton.className = 'btn-del';
+	delButton.innerHTML="X";
+
+	delButton.addEventListener('click', function(todoItem, domItem){
+		return function(){
+			myList.removeTask(todoItem);
+			//remove from finished list
+			domItem.parentNode.removeChild(domItem);				
+		}
+	}(item, domItem));
+
+	domItem.appendChild(delButton);
 
 	return domItem;
 
@@ -108,7 +139,7 @@ function syncView(myList){
 		
 		//add to finished view
 		else
-			finishedListView.appendChild(finishedDomItem(item));	
+			finishedListView.appendChild(finishedDomItem(item, myList));	
 			
 	}
 }

@@ -10,18 +10,24 @@
 		}
 
 		.time-stamp{
-			padding-left: 5px;
 			font-size: small;
+			color:#888;
+			padding-left: 10px;
+		}
+		.btn-del{
+			padding-left: 10px;
+			display: none;
+			cursor:pointer;
+		}
+		.list-item:hover .btn-del{
+			display: inline-block;
 		}
 	</style>
 </head>
 <body>
-	<h1>TODO LIST</h1>
+	<h1 class="app-title">TODO LIST</h1>
 	<div id='todo-view'>
 		<ul id='list-content'>
-<!-- 			<li class="list-item">
-				<input type="checkbox"><span></span>
-			</li> -->
 		</ul>
 
 		<div id='input-add-item'>
@@ -33,9 +39,7 @@
 	</div>
 	<div id='finished-view' class="hidden">
 		<ul id='finished-list-content'>
-<!-- 			<li class="list-item">
-				<span></span>
-			</li> -->
+
 		</ul>
 		<button type='button' id='button-return'>RETURN</button>
 	</div>
