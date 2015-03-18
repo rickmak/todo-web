@@ -13,17 +13,13 @@ function todoItem(arg) {
 
 todoItem.prototype.finish = function() {
   this.pending = false;
-  if (typeof(this.container) != 'undefined')
-    this.container.saveToLS();
+  this.container.saveToLS();
 }
 
 todoItem.prototype.remove = function() {
-  if (typeof(this.container) != 'undefined')
-    if (this.container.list.indexOf(this) != -1) {
-
-      this.container.list.splice(this.container.list.indexOf(this), 1);
-      this.container.saveToLS();
-    }
+  if (this.container.list.indexOf(this) != -1) {
+    this.container.list.splice(this.container.list.indexOf(this), 1);
+  }
 }
 
 todoItem.prototype.setDomNode = function(domNode) {

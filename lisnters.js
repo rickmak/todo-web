@@ -7,7 +7,7 @@ function toggleView() {
   else{
 
     document.getElementById("todo-view").className = "";
-    document.getElementById("finished-view").className = "hidden";    
+    document.getElementById("finished-view").className = "hidden";
   }
 }
 
@@ -47,6 +47,6 @@ function getDeleteBtnListner(item){
   return function(){
       item.remove();
       //remove from finished list
-      item.domNode.parentNode.removeChild(item.domNode);        
+      item.domNode.parentNode.removeChild(item.domNode);
   }
 }

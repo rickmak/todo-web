@@ -17,13 +17,10 @@ function todoDomItem(item) {
   domItem.appendChild(checkbox);
   domItem.appendChild(text);
 
-  //for backward compatibility
-  if (typeof(item.birth) !== "undefined") {
-    var timeStamp = document.createElement('span');
-    timeStamp.className = 'time-stamp';
-    timeStamp.innerHTML = "Created at " + item.birth;
-    domItem.appendChild(timeStamp);
-  }
+  var timeStamp = document.createElement('span');
+  timeStamp.className = 'time-stamp';
+  timeStamp.innerHTML = "Created at " + item.birth;
+  domItem.appendChild(timeStamp);
 
   var delButton = document.createElement('button');
   delButton.type = "button";
@@ -38,7 +35,6 @@ function todoDomItem(item) {
 }
 
 function finishedDomItem(item){
-  console.log(item);
   var domItem = document.createElement('li');
   domItem.className = 'list-item';
   item.setDomNode(domItem);
@@ -48,13 +44,10 @@ function finishedDomItem(item){
 
   domItem.appendChild(text);
 
-  //for backward compatibility
-  if (typeof(item.birth) !== "undefined"){
-    var timeStamp = document.createElement('span');
-    timeStamp.className='time-stamp';
-    timeStamp.innerHTML = "Created at " + item.birth;
-    domItem.appendChild(timeStamp);
-  }
+  var timeStamp = document.createElement('span');
+  timeStamp.className='time-stamp';
+  timeStamp.innerHTML = "Created at " + item.birth;
+  domItem.appendChild(timeStamp);
 
   var delButton = document.createElement('button');
   delButton.type = "button";
