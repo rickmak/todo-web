@@ -1,17 +1,19 @@
-.hidden{
-	display: none;
+ul {
+  padding: 0;
 }
 
-.time-stamp{
-	font-size: small;
-	color:#888;
-	padding-left: 10px;
+.hidden {
+  display: none;
 }
-.btn-del{
-	padding-left: 10px;
-	display: none;
-	cursor:pointer;
+
+.time-stamp {
+  font-size: small;
+  color: #888;
+  padding: 0 10px;
 }
-.list-item:hover .btn-del{
-	display: inline-block;
+
+.btn-del {
+  margine-left: 10px;
+  display: inline-block;
+  cursor: pointer;
 }

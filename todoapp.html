@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>TODO APP</title>
-	<link rel="stylesheet" type="text/css" href="css/todoapp.css">
-		
+  <meta charset="UTF-8">
+  <title>TODO APP</title>
+  <link rel="stylesheet" type="text/css" href="css/todoapp.css">
+    
 </head>
 <body>
-	<h1 class="app-title">TODO LIST</h1>
-	<div id='todo-view'>
-		<ul id='list-content'>
-		</ul>
+  <h1 class="app-title">TODO LIST</h1>
+  <div id="todo-view">
+    <ul id="list-content">
+    </ul>
 
-		<div id='input-add-item'>
-			<input type="text" id="input-content"><span><button type="button" id="button-add-item">ADD</button></span>
-		</div>
+    <div id="input-add-item">
+      <input type="text" id="input-content"><span><button type="button" id="button-add-item">ADD</button></span>
+    </div>
 
-		<button type="button" id="button-view-finished">VIEW FINISHED</button>
+    <button type="button" id="button-view-finished">VIEW FINISHED</button>
 
-	</div>
-	<div id='finished-view' class="hidden">
-		<ul id='finished-list-content'>
-
-		</ul>
-		<button type='button' id='button-return'>RETURN</button>
-	</div>
-	<script src="model/timeStamp.js"></script>
-	<script src="model/todoItem.js"></script>
-	<script src="model/todoList.js"></script>
-	<script src="modelToView.js"></script>
-	<script src="lisnters.js"></script>
-	<script src="todoapp.js"></script>
+  </div>
+  <div id="finished-view" class="hidden">
+    <ul id="finished-list-content">
+    </ul>
+    <button type="button" id="button-return">RETURN</button>
+  </div>
+  <script src="model/timeStamp.js"></script>
+  <script src="model/todoItem.js"></script>
+  <script src="model/todoList.js"></script>
+  <script src="modelToView.js"></script>
+  <script src="lisnters.js"></script>
+  <script src="todoapp.js"></script>
 </body>
 </html>

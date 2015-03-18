@@ -1,22 +1,21 @@
-function syncView(myList){
-	var todoListView = document.getElementById("list-content");
-	var finishedListView = document.getElementById("finished-list-content");
+function syncView(myList) {
+  var todoListView = document.getElementById("list-content");
+  var finishedListView = document.getElementById("finished-list-content");
  
-	todoListView.innerHTML = "";
-	finishedListView.innerHTML = "";
+  todoListView.innerHTML = "";
+  finishedListView.innerHTML = "";
 
-	for (var i = 0; i < myList.list.length; i++){
-		var item = myList.list[i];
+  for (var i = 0; i < myList.list.length; i++) {
+    var item = myList.list[i];
 
-		//add to to-do view
-		if (item.pending)
-			todoListView.appendChild(todoDomItem(item));
-		
-		//add to finished view
-		else
-			finishedListView.appendChild(finishedDomItem(item));	
-			
-	}
+    //add to to-do view
+    if (item.pending)
+      todoListView.appendChild(todoDomItem(item));
+    
+    //add to finished view
+    else
+      finishedListView.appendChild(finishedDomItem(item));
+  }
 }
 
 document.getElementById("button-return").addEventListener('click', toggleView);
