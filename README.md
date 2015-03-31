@@ -7,11 +7,11 @@ A Simple todo app run in browser. This project do not have any extenal dependcie
 - Enter at the input box cannot add item
 - Reload at finished list will go to the doing list
 
-## Tasks, with priority:
+## Tasks:
 
-1. Fix the above bugs
-2. Event binding and view rendering is mixed up, try to separate them
-3. Design and suggest an API for saveing the todolist on a server
+1. Show me good clean code
+2. Fix the above bugs
+3. Event binding and view rendering is mixed up, try to separate them
 4. Any refractoring you think will make the code better
 
 ## Constraint
