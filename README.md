@@ -5,14 +5,15 @@ A Simple todo app run in browser. This project do not have any extenal dependcie
 
 - A deleted to-do item re-appear on reload
 - Enter at the input box cannot add item
-- Reload at finished list will go to the doing list
 
 ## Tasks:
 
-1. Show me good clean code
+1. Show me you can read code and produce good clean code
 2. Fix the above bugs
-3. Event binding and view rendering is mixed up, try to separate them
-4. Any refractoring you think will make the code better
+3. list.js and item.js are in different style, try to compare and unify
+   (okay to just think of direction within time, we can discuss it later)
+4. Any refractoring you think will make the code better,
+   reduce the chance to produce above bugs
 
 ## Constraint
 
