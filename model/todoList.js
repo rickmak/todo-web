@@ -3,10 +3,9 @@ function todoList(name) {
   this.list = [];
 }
 
-todoList.prototype.addTask = function (item) {
+todoList.prototype.addTask = function(item) {
   item.setContainer(this);
   this.list.push(item);
-
   this.saveToLS();
 }
 
@@ -15,7 +14,7 @@ todoList.prototype.loadFromLS = function () {
   var plainList = JSON.parse(localStorage.getItem(this.name) || '[]');
   this.list = [];
   for (var i = 0; i < plainList.length; i++){
-    var item = new todoItem(plainList[i]);
+    var item = todoItem.Retore(plainList[i], this);
     item.setContainer(this);
     this.list.push(item);
   }
@@ -27,8 +26,11 @@ todoList.prototype.saveToLS = function () {
   var plainList = [];
 
   for (var i = 0; i < this.list.length; i++){
-    var item = new todoItem(this.list[i]);
-    plainList.push(item);
+    plainList.push({
+      "content": this.list[i].content,
+      "pending": this.list[i].pending,
+      "birth": this.list[i].birth
+    });
   }
 
   localStorage.setItem(this.name, JSON.stringify(plainList));

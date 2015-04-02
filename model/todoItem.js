@@ -1,14 +1,14 @@
 function todoItem(arg) {
-  if (typeof(arg) == 'string') {
-    this.content = arg;
-    this.pending = true;
-    this.birth = timeStamp();
-  }
-  else if (typeof(arg) == 'object') {
-    this.content = arg.content;
-    this.pending = arg.pending;
-    this.birth = arg.birth;
-  }
+  this.content = arg;
+  this.pending = true;
+  this.birth = timeStamp();
+}
+
+todoItem.Retore = function(obj) {
+  _item = new todoItem(obj.content);
+  _item.pending = obj.pending;
+  _item.birth = obj.birth;
+  return _item;
 }
 
 todoItem.prototype.finish = function() {

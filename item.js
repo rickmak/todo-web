@@ -34,7 +34,7 @@ function todoDomItem(item) {
   return domItem;
 }
 
-function finishedDomItem(item){
+function finishedDomItem(item) {
   var domItem = document.createElement('li');
   domItem.className = 'list-item';
   item.setDomNode(domItem);
@@ -59,5 +59,26 @@ function finishedDomItem(item){
   domItem.appendChild(delButton);
 
   return domItem;
+}
 
+function getCheckboxListener(item) {
+  return function(){
+    setTimeout(function(){
+      item.finish();
+      //remove from todo list in dom
+      item.domNode.parentNode.removeChild(item.domNode);
+      //add to finished list in dom
+      var domItem = finishedDomItem(item);
+      document.getElementById("finished-list-content").appendChild(domItem);
+      
+    }, 500);
+  }
+}
+
+function getDeleteBtnListner(item) {
+  return function(){
+    item.remove();
+    //remove from finished list
+    item.domNode.parentNode.removeChild(item.domNode);
+  }
 }
