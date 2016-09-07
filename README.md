@@ -1,5 +1,5 @@
 # todo-web
-A Simple todo app run in browser. This project do not have any extenal dependcies.
+A Simple todo app run in browser. This project do not have any external dependencies.
 
 ## Bugs:
 
@@ -17,11 +17,11 @@ A Simple todo app run in browser. This project do not have any extenal dependcie
 
 ## Constraint
 
-- You are not allow to import extenal library
+- You are not allowed to import extenal library
 - Time limits is 1 hr
 - Commit should be atomic
 
-## Evalation
+## Evaluation
 
 - We look for clean code
 - We look for maintainable code
