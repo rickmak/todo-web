@@ -19,7 +19,6 @@ A Simple todo app that runs in the browser. This project does not have any exter
 
 - You are not allowed to import any external libraries
 - Time limit is 1 hr
-- Commits should be atomic
 
 ## Evaluation
 
