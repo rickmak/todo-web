@@ -13,7 +13,7 @@
     </ul>
 
     <p id="input-add-item">
-      <input type="text" id="input-content">
+      <input type="text" id="input-content" onkeypress="return checkInput(event)">
       <button type="button" id="button-add-item">ADD</button>
     </p>
     <p>
@@ -33,5 +33,6 @@
   <script src="item.js"></script>
   <script src="list.js"></script>
   <script src="todoapp.js"></script>
+  <script src="addenter.js"></script>
 </body>
 </html>
