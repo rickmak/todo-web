@@ -1,31 +1,33 @@
-function todoItem(arg) {
-  this.content = arg;
-  this.pending = true;
-  this.birth = timeStamp();
-}
-
-todoItem.Retore = function(obj) {
-  _item = new todoItem(obj.content);
-  _item.pending = obj.pending;
-  _item.birth = obj.birth;
-  return _item;
-}
-
-todoItem.prototype.finish = function() {
-  this.pending = false;
-  this.container.saveToLS();
-}
-
-todoItem.prototype.remove = function() {
-  if (this.container.list.indexOf(this) != -1) {
-    this.container.list.splice(this.container.list.indexOf(this), 1);
+class TodoItem {
+  constructor(arg) {
+    this.content = arg;
+    this.pending = true;
+    this.birth = timeStamp();
   }
-}
 
-todoItem.prototype.setDomNode = function(domNode) {
-  this.domNode = domNode;
-}
+  static retore(obj) {
+    var _item = new TodoItem(obj.content);
+    _item.pending = obj.pending;
+    _item.birth = obj.birth;
+    return _item;
+  }
 
-todoItem.prototype.setContainer = function(container) {
-  this.container = container;
+  finish() {
+    this.pending = false;
+    this.container.saveToLS();
+  }
+
+  remove() {
+    if (this.container.list.indexOf(this) != -1) {
+      this.container.list.splice(this.container.list.indexOf(this), 1);
+    }
+  }
+
+  setDomNode(domNode) {
+    this.domNode = domNode;
+  }
+
+  setContainer(container) {
+    this.container = container;
+  }
 }
